@@ -37,6 +37,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC0824E42184D2A700BC259B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AC0824E52184D2CE00BC259B /* Storyboards */,
+				ACB2FB8C201DE32E00DD2A43 /* BorderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AC0824E52184D2CE00BC259B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AC274A35201C8AF6008CED02 /* LaunchScreen.storyboard */,
+				AC274A30201C8AF6008CED02 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		AC274A20201C8AF6008CED02 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +74,21 @@
 		AC274A2B201C8AF6008CED02 /* MoneyManager */ = {
 			isa = PBXGroup;
 			children = (
-				ACB2FB8C201DE32E00DD2A43 /* BorderView.swift */,
-				AC274A2C201C8AF6008CED02 /* AppDelegate.swift */,
-				AC274A2E201C8AF6008CED02 /* ViewController.swift */,
-				AC274A30201C8AF6008CED02 /* Main.storyboard */,
+				ACD1E30B218D929F0045525F /* Controllers */,
+				AC0824E42184D2A700BC259B /* Views */,
 				AC274A33201C8AF6008CED02 /* Assets.xcassets */,
-				AC274A35201C8AF6008CED02 /* LaunchScreen.storyboard */,
 				AC274A38201C8AF6008CED02 /* Info.plist */,
 			);
 			path = MoneyManager;
+			sourceTree = "<group>";
+		};
+		ACD1E30B218D929F0045525F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AC274A2C201C8AF6008CED02 /* AppDelegate.swift */,
+				AC274A2E201C8AF6008CED02 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,11 +118,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = hulkdx;
 				TargetAttributes = {
 					AC274A28201C8AF6008CED02 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -181,6 +206,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -188,6 +214,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -238,6 +265,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -245,6 +273,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -279,11 +308,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MoneyManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hulkdx.moneymanager.MoneyManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -293,11 +323,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MoneyManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hulkdx.moneymanager.MoneyManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

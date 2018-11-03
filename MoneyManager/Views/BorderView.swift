@@ -8,7 +8,8 @@
 
 import UIKit
 
-@IBDesignable class BorderView : UIView {
+@IBDesignable
+class BorderView : UIView {
     @IBInspectable var borderColor: UIColor = .clear {
         didSet {
             layer.borderColor = borderColor.cgColor
