@@ -12,21 +12,23 @@ import XCTest
 class MainViewControllerTests: XCTestCase {
     
     var sut: MainViewController!
+    var presenter = MainPresenter()
 
     override func setUp() {
         sut = MainViewController()
         // access loadView, viewDidLoad
-        _   = sut.view
+        // _   = sut.view
+        sut.presenter = presenter
     }
 
     func test_should_sync_data_on_view_did_load() {
-        //
-        // XCTFail()
+        sut.onStart()
+        XCTAssert(presenter.isViewAttached())
     }
 }
 
 extension MainViewControllerTests {
-    class MockNetworkService: PNetworkService {
+    class MockMainPresenter: MainPresenter {
         
     }
 }
