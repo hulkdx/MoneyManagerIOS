@@ -4,6 +4,6 @@
 
 import Foundation
 
-protocol MainMvpView {
+protocol MainMvpView: BaseMvpView {
     
 }

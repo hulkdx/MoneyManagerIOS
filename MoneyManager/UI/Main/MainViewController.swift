@@ -5,19 +5,25 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: BaseViewController, MainMvpView {
+    
+    var presenter: MainPresenter!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.presenter = MainPresenter()
+        presenter.attachView(view: self)
     }
     
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidDisappear(_ animated: Bool) {
+        // How to also detachView it when it goes to background?
+        // @see: https://stackoverflow.com/questions/18222052/view-controller-variables-in-applicationwillresignactive
+        presenter.detachView()
     }
 
-
+    //-----------------------
+    // MvpViews methods
+    //-----------------------
+    
 }
-
