@@ -10,6 +10,7 @@ class MainViewController: BaseViewController, MainMvpView {
     var presenter: MainPresenter!
 
     override func viewDidLoad() {
+        print("viewDidLoad")
         super.viewDidLoad()
         
         self.presenter = MainPresenter()
