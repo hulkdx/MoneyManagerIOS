@@ -10,16 +10,25 @@ class MainViewController: BaseViewController, MainMvpView {
     var presenter: MainPresenter!
 
     override func viewDidLoad() {
-        print("viewDidLoad")
+        // print("viewDidLoad")
         super.viewDidLoad()
         
         self.presenter = MainPresenter()
-        presenter.attachView(view: self)
+        
+        onStart()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         // How to also detachView it when it goes to background?
         // @see: https://stackoverflow.com/questions/18222052/view-controller-variables-in-applicationwillresignactive
+        onStop()
+    }
+    
+    func onStart() {
+        presenter.attachView(view: self)
+    }
+    
+    func onStop() {
         presenter.detachView()
     }
 
