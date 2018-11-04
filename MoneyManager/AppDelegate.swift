@@ -1,9 +1,6 @@
+
 //
-//  AppDelegate.swift
-//  MoneyManager
-//
-//  Created by saba rezvan on 27/01/2018.
-//  Copyright © 2018 hulkdx. All rights reserved.
+//  Created by hulkdx on 27/01/2018.
 //
 
 import UIKit

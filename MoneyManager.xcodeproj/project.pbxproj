@@ -7,27 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12073AE742F009A93A424499 /* Pods_MoneyManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B81B02EDD876F527DE9064BB /* Pods_MoneyManager.framework */; };
 		AC274A2D201C8AF6008CED02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC274A2C201C8AF6008CED02 /* AppDelegate.swift */; };
-		AC274A2F201C8AF6008CED02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC274A2E201C8AF6008CED02 /* ViewController.swift */; };
+		AC274A2F201C8AF6008CED02 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC274A2E201C8AF6008CED02 /* MainViewController.swift */; };
 		AC274A32201C8AF6008CED02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC274A30201C8AF6008CED02 /* Main.storyboard */; };
 		AC274A34201C8AF6008CED02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC274A33201C8AF6008CED02 /* Assets.xcassets */; };
 		AC274A37201C8AF6008CED02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC274A35201C8AF6008CED02 /* LaunchScreen.storyboard */; };
 		ACB2FB8D201DE32E00DD2A43 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB2FB8C201DE32E00DD2A43 /* BorderView.swift */; };
+		ACD93946218EE8410004416A /* MainControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD93945218EE8410004416A /* MainControllerTests.swift */; };
+		ACD93953218EF3670004416A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD93952218EF3670004416A /* NetworkService.swift */; };
+		ACD93957218EFA600004416A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD93956218EFA600004416A /* DataManager.swift */; };
+		ACD93959218EFA6B0004416A /* SyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD93958218EFA6B0004416A /* SyncService.swift */; };
+		ACD9395B218EFAA40004416A /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD9395A218EFAA40004416A /* MainPresenter.swift */; };
+		ACD9395D218EFAB90004416A /* MainMvpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD9395C218EFAB90004416A /* MainMvpView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		ACD93948218EE8410004416A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC274A21201C8AF6008CED02 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC274A28201C8AF6008CED02;
+			remoteInfo = MoneyManager;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		1AAB1AA75A424496ADBE7A5A /* Pods-MoneyManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoneyManager/Pods-MoneyManager.debug.xcconfig"; sourceTree = "<group>"; };
+		1FA322146821923C4745440F /* Pods-MoneyManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoneyManager/Pods-MoneyManager.release.xcconfig"; sourceTree = "<group>"; };
 		AC274A29201C8AF6008CED02 /* MoneyManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC274A2C201C8AF6008CED02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AC274A2E201C8AF6008CED02 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AC274A2E201C8AF6008CED02 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AC274A31201C8AF6008CED02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC274A33201C8AF6008CED02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC274A36201C8AF6008CED02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC274A38201C8AF6008CED02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACB2FB8C201DE32E00DD2A43 /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
+		ACD93943218EE8410004416A /* MoneyManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACD93945218EE8410004416A /* MainControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainControllerTests.swift; sourceTree = "<group>"; };
+		ACD93947218EE8410004416A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACD93952218EF3670004416A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		ACD93956218EFA600004416A /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		ACD93958218EFA6B0004416A /* SyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncService.swift; sourceTree = "<group>"; };
+		ACD9395A218EFAA40004416A /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		ACD9395C218EFAB90004416A /* MainMvpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMvpView.swift; sourceTree = "<group>"; };
+		B81B02EDD876F527DE9064BB /* Pods_MoneyManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoneyManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AC274A26201C8AF6008CED02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12073AE742F009A93A424499 /* Pods_MoneyManager.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACD93940218EE8410004416A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,29 +73,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AC0824E42184D2A700BC259B /* Views */ = {
+		25F98D4298419E9B7A6D0627 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AC0824E52184D2CE00BC259B /* Storyboards */,
-				ACB2FB8C201DE32E00DD2A43 /* BorderView.swift */,
+				B81B02EDD876F527DE9064BB /* Pods_MoneyManager.framework */,
 			);
-			path = Views;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		AC0824E52184D2CE00BC259B /* Storyboards */ = {
+		4D3A698F96FD7DAC23F3E2F3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AC274A35201C8AF6008CED02 /* LaunchScreen.storyboard */,
-				AC274A30201C8AF6008CED02 /* Main.storyboard */,
+				1AAB1AA75A424496ADBE7A5A /* Pods-MoneyManager.debug.xcconfig */,
+				1FA322146821923C4745440F /* Pods-MoneyManager.release.xcconfig */,
 			);
-			path = Storyboards;
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AC0824E42184D2A700BC259B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				ACD9394F218EF1970004416A /* Main */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		AC274A20201C8AF6008CED02 = {
 			isa = PBXGroup;
 			children = (
 				AC274A2B201C8AF6008CED02 /* MoneyManager */,
+				ACD93944218EE8410004416A /* MoneyManagerTests */,
 				AC274A2A201C8AF6008CED02 /* Products */,
+				4D3A698F96FD7DAC23F3E2F3 /* Pods */,
+				25F98D4298419E9B7A6D0627 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				AC274A29201C8AF6008CED02 /* MoneyManager.app */,
+				ACD93943218EE8410004416A /* MoneyManagerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,21 +121,85 @@
 		AC274A2B201C8AF6008CED02 /* MoneyManager */ = {
 			isa = PBXGroup;
 			children = (
-				ACD1E30B218D929F0045525F /* Controllers */,
-				AC0824E42184D2A700BC259B /* Views */,
-				AC274A33201C8AF6008CED02 /* Assets.xcassets */,
+				AC274A2C201C8AF6008CED02 /* AppDelegate.swift */,
 				AC274A38201C8AF6008CED02 /* Info.plist */,
+				AC274A33201C8AF6008CED02 /* Assets.xcassets */,
+				AC274A35201C8AF6008CED02 /* LaunchScreen.storyboard */,
+				ACD93950218EF1BD0004416A /* CustomViews */,
+				ACD9394E218EF17D0004416A /* Utils */,
+				ACD9394D218EF16E0004416A /* Data */,
+				AC0824E42184D2A700BC259B /* UI */,
 			);
 			path = MoneyManager;
 			sourceTree = "<group>";
 		};
-		ACD1E30B218D929F0045525F /* Controllers */ = {
+		ACD93944218EE8410004416A /* MoneyManagerTests */ = {
 			isa = PBXGroup;
 			children = (
-				AC274A2C201C8AF6008CED02 /* AppDelegate.swift */,
-				AC274A2E201C8AF6008CED02 /* ViewController.swift */,
+				ACD93945218EE8410004416A /* MainControllerTests.swift */,
+				ACD93947218EE8410004416A /* Info.plist */,
 			);
-			path = Controllers;
+			path = MoneyManagerTests;
+			sourceTree = "<group>";
+		};
+		ACD9394D218EF16E0004416A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				ACD93955218EFA430004416A /* Model */,
+				ACD93954218EFA310004416A /* Local */,
+				ACD93951218EF3310004416A /* Remote */,
+				ACD93956218EFA600004416A /* DataManager.swift */,
+				ACD93958218EFA6B0004416A /* SyncService.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		ACD9394E218EF17D0004416A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		ACD9394F218EF1970004416A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AC274A2E201C8AF6008CED02 /* MainViewController.swift */,
+				AC274A30201C8AF6008CED02 /* Main.storyboard */,
+				ACD9395A218EFAA40004416A /* MainPresenter.swift */,
+				ACD9395C218EFAB90004416A /* MainMvpView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		ACD93950218EF1BD0004416A /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				ACB2FB8C201DE32E00DD2A43 /* BorderView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		ACD93951218EF3310004416A /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				ACD93952218EF3670004416A /* NetworkService.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		ACD93954218EFA310004416A /* Local */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		ACD93955218EFA430004416A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,9 +209,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC274A3B201C8AF6008CED02 /* Build configuration list for PBXNativeTarget "MoneyManager" */;
 			buildPhases = (
+				A81424404480AA8477A663DE /* [CP] Check Pods Manifest.lock */,
 				AC274A25201C8AF6008CED02 /* Sources */,
 				AC274A26201C8AF6008CED02 /* Frameworks */,
 				AC274A27201C8AF6008CED02 /* Resources */,
+				7D285123EFDA465C6A085710 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -111,13 +224,31 @@
 			productReference = AC274A29201C8AF6008CED02 /* MoneyManager.app */;
 			productType = "com.apple.product-type.application";
 		};
+		ACD93942218EE8410004416A /* MoneyManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACD9394C218EE8410004416A /* Build configuration list for PBXNativeTarget "MoneyManagerTests" */;
+			buildPhases = (
+				ACD9393F218EE8410004416A /* Sources */,
+				ACD93940218EE8410004416A /* Frameworks */,
+				ACD93941218EE8410004416A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ACD93949218EE8410004416A /* PBXTargetDependency */,
+			);
+			name = MoneyManagerTests;
+			productName = MoneyManagerTests;
+			productReference = ACD93943218EE8410004416A /* MoneyManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		AC274A21201C8AF6008CED02 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = hulkdx;
 				TargetAttributes = {
@@ -125,6 +256,11 @@
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
+					};
+					ACD93942218EE8410004416A = {
+						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AC274A28201C8AF6008CED02;
 					};
 				};
 			};
@@ -142,6 +278,7 @@
 			projectRoot = "";
 			targets = (
 				AC274A28201C8AF6008CED02 /* MoneyManager */,
+				ACD93942218EE8410004416A /* MoneyManagerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -157,20 +294,97 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ACD93941218EE8410004416A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7D285123EFDA465C6A085710 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MoneyManager/Pods-MoneyManager-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoneyManager/Pods-MoneyManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A81424404480AA8477A663DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoneyManager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AC274A25201C8AF6008CED02 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC274A2F201C8AF6008CED02 /* ViewController.swift in Sources */,
+				AC274A2F201C8AF6008CED02 /* MainViewController.swift in Sources */,
+				ACD93957218EFA600004416A /* DataManager.swift in Sources */,
+				ACD93959218EFA6B0004416A /* SyncService.swift in Sources */,
 				ACB2FB8D201DE32E00DD2A43 /* BorderView.swift in Sources */,
+				ACD93953218EF3670004416A /* NetworkService.swift in Sources */,
+				ACD9395B218EFAA40004416A /* MainPresenter.swift in Sources */,
 				AC274A2D201C8AF6008CED02 /* AppDelegate.swift in Sources */,
+				ACD9395D218EFAB90004416A /* MainMvpView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACD9393F218EE8410004416A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACD93946218EE8410004416A /* MainControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ACD93949218EE8410004416A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC274A28201C8AF6008CED02 /* MoneyManager */;
+			targetProxy = ACD93948218EE8410004416A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AC274A30201C8AF6008CED02 /* Main.storyboard */ = {
@@ -305,6 +519,7 @@
 		};
 		AC274A3C201C8AF6008CED02 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AAB1AA75A424496ADBE7A5A /* Pods-MoneyManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -320,6 +535,7 @@
 		};
 		AC274A3D201C8AF6008CED02 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FA322146821923C4745440F /* Pods-MoneyManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -330,6 +546,43 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		ACD9394A218EE8410004416A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MoneyManagerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hulkdx.moneymanager.MoneyManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoneyManager.app/MoneyManager";
+			};
+			name = Debug;
+		};
+		ACD9394B218EE8410004416A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MoneyManagerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hulkdx.moneymanager.MoneyManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoneyManager.app/MoneyManager";
 			};
 			name = Release;
 		};
@@ -350,6 +603,15 @@
 			buildConfigurations = (
 				AC274A3C201C8AF6008CED02 /* Debug */,
 				AC274A3D201C8AF6008CED02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACD9394C218EE8410004416A /* Build configuration list for PBXNativeTarget "MoneyManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACD9394A218EE8410004416A /* Debug */,
+				ACD9394B218EE8410004416A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

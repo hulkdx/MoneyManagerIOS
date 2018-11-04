@@ -30,8 +30,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0 EUR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRc-2C-8Up">
-                                        <rect key="frame" x="284" y="7" width="43" height="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 EUR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRc-2C-8Up">
+                                        <rect key="frame" x="283" y="7" width="43" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -39,6 +39,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstItem="qRc-2C-8Up" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZhA-PF-f8M" secondAttribute="trailing" constant="8" symbolic="YES" id="HF5-bZ-Cmh"/>
                                     <constraint firstAttribute="trailing" secondItem="qRc-2C-8Up" secondAttribute="trailing" constant="8" id="MUw-xW-iIl"/>
                                     <constraint firstItem="ZhA-PF-f8M" firstAttribute="leading" secondItem="Eju-UY-JoH" secondAttribute="leading" constant="8" id="fT3-rD-p7v"/>
                                     <constraint firstItem="ZhA-PF-f8M" firstAttribute="centerY" secondItem="Eju-UY-JoH" secondAttribute="centerY" id="kAa-sA-Aka"/>
