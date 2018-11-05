@@ -12,7 +12,7 @@ import XCTest
 class MainViewControllerTests: XCTestCase {
     
     var sut: MainViewController!
-    var presenter = MainPresenter()
+    var presenter = MockMainPresenter()
 
     override func setUp() {
         sut = MainViewController()
@@ -21,14 +21,23 @@ class MainViewControllerTests: XCTestCase {
         sut.presenter = presenter
     }
 
-    func test_should_sync_data_on_view_did_load() {
+    func test_should_attachview_on_viewdidload() {
         sut.onStart()
         XCTAssert(presenter.isViewAttached())
+    }
+    
+    func test_should_sync_transaction_on_viewdid_oad() {
+        sut.onStart()
+        XCTAssert(presenter.isCalled)
     }
 }
 
 extension MainViewControllerTests {
-    class MockMainPresenter: MainPresenter {
+    class MockMainPresenter: MainPresenter<MainViewController> {
+        var isCalled = false
         
+        override func syncTransactions() {
+            isCalled = true
+        }
     }
 }

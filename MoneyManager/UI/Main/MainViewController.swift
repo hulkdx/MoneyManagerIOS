@@ -7,7 +7,7 @@ import UIKit
 
 class MainViewController: BaseViewController, MainMvpView {
     
-    var presenter: MainPresenter!
+    var presenter: MainPresenter<MainViewController>!
 
     override func viewDidLoad() {
         // print("viewDidLoad")
@@ -26,6 +26,7 @@ class MainViewController: BaseViewController, MainMvpView {
     
     func onStart() {
         presenter.attachView(view: self)
+        presenter.syncTransactions()
     }
     
     func onStop() {

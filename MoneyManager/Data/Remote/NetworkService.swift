@@ -6,9 +6,14 @@ import Foundation
 
 class NetworkService {
     
+    let baseURL = ""
+    
+    func getTransactions() {
+        
+    }
 }
 
 
-protocol PNetworkService {
-    
+protocol NetworkServiceDelegate {
+    func getTransactions()
 }
