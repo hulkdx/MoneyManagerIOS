@@ -14,6 +14,7 @@
 		AC274A34201C8AF6008CED02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC274A33201C8AF6008CED02 /* Assets.xcassets */; };
 		AC274A37201C8AF6008CED02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC274A35201C8AF6008CED02 /* LaunchScreen.storyboard */; };
 		AC3DB4F32190C2D90025F823 /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3DB4F22190C2D90025F823 /* DataManagerTests.swift */; };
+		AC64567F21937CCB00295D4F /* DataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC64567E21937CCB00295D4F /* DataResult.swift */; };
 		ACAB7A5A218F2BFA00062B43 /* MainPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAB7A59218F2BFA00062B43 /* MainPresenterTests.swift */; };
 		ACB2FB8D201DE32E00DD2A43 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB2FB8C201DE32E00DD2A43 /* BorderView.swift */; };
 		ACD93946218EE8410004416A /* MainControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD93945218EE8410004416A /* MainControllerTests.swift */; };
@@ -24,6 +25,7 @@
 		ACD93960218EFEFE0004416A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD9395F218EFEFE0004416A /* BaseViewController.swift */; };
 		ACD93962218EFF110004416A /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD93961218EFF110004416A /* BasePresenter.swift */; };
 		ACD93964218EFF200004416A /* BaseMvpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD93963218EFF200004416A /* BaseMvpView.swift */; };
+		ACECCB852191F6050055F233 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACECCB842191F6050055F233 /* NetworkServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,7 @@
 		AC274A36201C8AF6008CED02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC274A38201C8AF6008CED02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC3DB4F22190C2D90025F823 /* DataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerTests.swift; sourceTree = "<group>"; };
+		AC64567E21937CCB00295D4F /* DataResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResult.swift; sourceTree = "<group>"; };
 		ACAB7A59218F2BFA00062B43 /* MainPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTests.swift; sourceTree = "<group>"; };
 		ACB2FB8C201DE32E00DD2A43 /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
 		ACD93943218EE8410004416A /* MoneyManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +62,7 @@
 		ACD9395F218EFEFE0004416A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		ACD93961218EFF110004416A /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		ACD93963218EFF200004416A /* BaseMvpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMvpView.swift; sourceTree = "<group>"; };
+		ACECCB842191F6050055F233 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 		B81B02EDD876F527DE9064BB /* Pods_MoneyManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoneyManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -148,6 +152,7 @@
 				ACAB7A59218F2BFA00062B43 /* MainPresenterTests.swift */,
 				ACD93947218EE8410004416A /* Info.plist */,
 				AC3DB4F22190C2D90025F823 /* DataManagerTests.swift */,
+				ACECCB842191F6050055F233 /* NetworkServiceTests.swift */,
 			);
 			path = MoneyManagerTests;
 			sourceTree = "<group>";
@@ -208,6 +213,7 @@
 		ACD93955218EFA430004416A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AC64567E21937CCB00295D4F /* DataResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -387,6 +393,7 @@
 				ACD9395B218EFAA40004416A /* MainPresenter.swift in Sources */,
 				AC274A2D201C8AF6008CED02 /* AppDelegate.swift in Sources */,
 				ACD9395D218EFAB90004416A /* MainMvpView.swift in Sources */,
+				AC64567F21937CCB00295D4F /* DataResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +403,7 @@
 			files = (
 				ACD93946218EE8410004416A /* MainControllerTests.swift in Sources */,
 				AC3DB4F32190C2D90025F823 /* DataManagerTests.swift in Sources */,
+				ACECCB852191F6050055F233 /* NetworkServiceTests.swift in Sources */,
 				ACAB7A5A218F2BFA00062B43 /* MainPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

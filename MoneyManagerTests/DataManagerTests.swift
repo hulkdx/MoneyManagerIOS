@@ -21,7 +21,7 @@ class DataManagerTests: XCTestCase {
     }
 
     func test_getTransactionsRemote_shouldcall_networkService() {
-        sut.getTransactionsRemote()
+        sut.getTransactionsRemote{ ignore in}
         
         XCTAssert(networkService.isGetTransactionsCalled)
     }
@@ -30,8 +30,8 @@ class DataManagerTests: XCTestCase {
 extension DataManagerTests {
     class MockNetworkService: NetworkService {
         var isGetTransactionsCalled = false
-        override func getTransactions() {
-            super.getTransactions()
+        override func getTransactions(completion: @escaping (DataResult<String>) -> ()) {
+            super.getTransactions(completion: completion)
             isGetTransactionsCalled = true
         }
     }

@@ -36,8 +36,9 @@ extension MainPresenterTests {
     
     class MockDataManager: DataManager {
         var is_get_transactions_remote_called = false
-        override func getTransactionsRemote() {
-            super.getTransactionsRemote()
+        
+        override func getTransactionsRemote(completion: @escaping (DataResult<String>) -> ()) {
+            super.getTransactionsRemote(completion: completion)
             is_get_transactions_remote_called = true
         }
     }

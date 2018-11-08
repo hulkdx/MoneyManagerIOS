@@ -13,7 +13,9 @@ class MainPresenter<T: BaseMvpView>: BasePresenter<T>, MainPresenterDelegate {
     }
     
     func syncTransactions() {
-        dataManager.getTransactionsRemote()
+        dataManager.getTransactionsRemote{ result in
+            // TODO 
+        }
     }
 }
 
