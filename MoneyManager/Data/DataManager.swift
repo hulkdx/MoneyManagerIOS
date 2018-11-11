@@ -2,8 +2,6 @@
 // Created by hulkdx on 04/11/2018
 //
 
-import SwiftyJSON
-
 class DataManager: DataManagerProtocol {
     
     var networkService: NetworkService
@@ -12,11 +10,11 @@ class DataManager: DataManagerProtocol {
         networkService = NetworkService()
     }
     
-    func getTransactionsRemote(completion: @escaping (DataResult<String>) -> ()) {
+    func getTransactionsRemote(completion: @escaping (DataResult<[Transaction]>) -> ()) {
         networkService.getTransactions(completion: completion)
     }
 }
 
 protocol DataManagerProtocol {
-    func getTransactionsRemote(completion: @escaping (DataResult<String>) -> ())
+    func getTransactionsRemote(completion: @escaping (DataResult<[Transaction]>) -> ())
 }

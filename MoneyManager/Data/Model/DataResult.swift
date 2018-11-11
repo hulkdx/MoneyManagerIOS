@@ -5,5 +5,5 @@
 
 enum DataResult<T> {
     case success(T)
-    case failed(Error?)
+    case failed(String?)
 }

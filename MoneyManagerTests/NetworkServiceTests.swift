@@ -11,7 +11,7 @@ import XCTest
 
 class NetworkServiceTests: XCTestCase {
     
-    let timeout = 3 as Double
+    let NET_TIMEOUT = 3 as Double
 
     var sut: NetworkService!
     
@@ -21,7 +21,7 @@ class NetworkServiceTests: XCTestCase {
     
     func test_getTransactions_is_succesful_with_test_data() {
         // TODO add a test data and result the expected
-        let e = expectation(description: "Netowork")
+        let e = expectation(description: "Network")
         
         sut.getTransactions{ result in
             var isFailed = false
@@ -36,7 +36,7 @@ class NetworkServiceTests: XCTestCase {
             e.fulfill()
         }
         
-        waitForExpectations(timeout: timeout, handler: nil)
+        waitForExpectations(timeout: NET_TIMEOUT, handler: nil)
     }
 
 }

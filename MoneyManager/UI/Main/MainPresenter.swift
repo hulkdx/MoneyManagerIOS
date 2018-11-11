@@ -4,7 +4,7 @@
 // Note: Couldn't figure out a way of doing Generic Type without using 
 //       <T: BaseMvpView>, is there anyway of doing that? 
 
-class MainPresenter<T: BaseMvpView>: BasePresenter<T>, MainPresenterDelegate {
+class MainPresenter<T: BaseMvpView>: BasePresenter<T>, MainPresenterProtocol {
     
     var dataManager: DataManager!
     
@@ -19,6 +19,6 @@ class MainPresenter<T: BaseMvpView>: BasePresenter<T>, MainPresenterDelegate {
     }
 }
 
-protocol MainPresenterDelegate {
+protocol MainPresenterProtocol {
     func syncTransactions()
 }
