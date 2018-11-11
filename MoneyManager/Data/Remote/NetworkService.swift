@@ -28,7 +28,7 @@ class NetworkService: NetworkServiceProtocol {
         commonRequest(url:        NetworkService.GET_TRANSACTIONS_URL,
                       method:     HTTPMethod.get,
                       completion: completion)
-        { json -> [Transaction] in
+        { json -> ([Transaction], Int) in
             var result = [Transaction]()
             // print(json)
             // Converting to object
@@ -58,7 +58,7 @@ class NetworkService: NetworkServiceProtocol {
                 result.append(transaction)
             }
             
-            return result
+            return (result, amount_count)
         }
     }
 
@@ -66,7 +66,7 @@ class NetworkService: NetworkServiceProtocol {
                            method: HTTPMethod,
                            paramethers: Parameters? = nil,
                            completion: @escaping (DataResult<[T]>) -> (),
-                           onJsonReceived: @escaping (NSDictionary) -> ([T]))
+                           onJsonReceived: @escaping (NSDictionary) -> ([T], Any?))
     {
         Alamofire.request(url,
                           method: method,
@@ -81,9 +81,9 @@ class NetworkService: NetworkServiceProtocol {
                     if let result = response.result.value {
                         let json = result as! NSDictionary
     
-                        let result = onJsonReceived(json)
+                        let (result, extra) = onJsonReceived(json)
                         print(result)
-                        completion(.success(result))
+                        completion(.success(result, extra))
                         return
                     }
                     else

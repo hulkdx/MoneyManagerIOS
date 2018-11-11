@@ -4,6 +4,10 @@
 
 
 enum DataResult<T> {
-    case success(T)
+    case success(T, Any?)
     case failed(String?)
+    
+    init(t: T) {
+        self = DataResult<T>.success(t, nil)
+    }
 }
