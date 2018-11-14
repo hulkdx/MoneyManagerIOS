@@ -82,7 +82,7 @@ class NetworkService: NetworkServiceProtocol {
                         let json = result as! NSDictionary
     
                         let (result, extra) = onJsonReceived(json)
-                        print(result)
+                        //print(result)
                         completion(.success(result, extra))
                         return
                     }

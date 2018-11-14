@@ -37,4 +37,7 @@ class MainViewController: BaseViewController, MainMvpView {
     // MvpViews methods
     //-----------------------
     
+    func showTransaction(transactions: [Transaction]) {
+        
+    }
 }

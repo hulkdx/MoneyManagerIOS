@@ -4,7 +4,7 @@
 
 class DataManager: DataManagerProtocol {
     
-    var networkService: NetworkService
+    var networkService: NetworkServiceProtocol
     
     init() {
         networkService = NetworkService()

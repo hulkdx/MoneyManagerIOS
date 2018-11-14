@@ -5,5 +5,5 @@
 import Foundation
 
 protocol MainMvpView: BaseMvpView {
-    //func showTransaction(List<>)
+    func showTransaction(transactions: [Transaction])
 }

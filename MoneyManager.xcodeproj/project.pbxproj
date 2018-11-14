@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		12073AE742F009A93A424499 /* Pods_MoneyManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B81B02EDD876F527DE9064BB /* Pods_MoneyManager.framework */; };
+		1D75D9436F071E573C13F37C /* Pods_MoneyManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33458756D01239E7ECBF3CA /* Pods_MoneyManagerTests.framework */; };
 		AC274A2D201C8AF6008CED02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC274A2C201C8AF6008CED02 /* AppDelegate.swift */; };
 		AC274A2F201C8AF6008CED02 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC274A2E201C8AF6008CED02 /* MainViewController.swift */; };
 		AC274A32201C8AF6008CED02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC274A30201C8AF6008CED02 /* Main.storyboard */; };
 		AC274A34201C8AF6008CED02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC274A33201C8AF6008CED02 /* Assets.xcassets */; };
 		AC274A37201C8AF6008CED02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC274A35201C8AF6008CED02 /* LaunchScreen.storyboard */; };
 		AC3DB4F32190C2D90025F823 /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3DB4F22190C2D90025F823 /* DataManagerTests.swift */; };
+		AC622C9B219CADAD00ADD05E /* TestDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC622C9A219CADAD00ADD05E /* TestDataFactory.swift */; };
 		AC64567F21937CCB00295D4F /* DataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC64567E21937CCB00295D4F /* DataResult.swift */; };
 		AC69C0962198958A0019B0F1 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69C0952198958A0019B0F1 /* Transaction.swift */; };
 		AC69C09C2198C3550019B0F1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69C09B2198C3550019B0F1 /* Category.swift */; };
@@ -43,6 +45,7 @@
 /* Begin PBXFileReference section */
 		1AAB1AA75A424496ADBE7A5A /* Pods-MoneyManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoneyManager/Pods-MoneyManager.debug.xcconfig"; sourceTree = "<group>"; };
 		1FA322146821923C4745440F /* Pods-MoneyManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoneyManager/Pods-MoneyManager.release.xcconfig"; sourceTree = "<group>"; };
+		432E10EE47D0437901B3E927 /* Pods-MoneyManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyManagerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoneyManagerTests/Pods-MoneyManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AC274A29201C8AF6008CED02 /* MoneyManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC274A2C201C8AF6008CED02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC274A2E201C8AF6008CED02 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		AC274A36201C8AF6008CED02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC274A38201C8AF6008CED02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC3DB4F22190C2D90025F823 /* DataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerTests.swift; sourceTree = "<group>"; };
+		AC622C9A219CADAD00ADD05E /* TestDataFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataFactory.swift; sourceTree = "<group>"; };
 		AC64567E21937CCB00295D4F /* DataResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResult.swift; sourceTree = "<group>"; };
 		AC69C0952198958A0019B0F1 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		AC69C09B2198C3550019B0F1 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 		ACD93963218EFF200004416A /* BaseMvpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMvpView.swift; sourceTree = "<group>"; };
 		ACECCB842191F6050055F233 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 		B81B02EDD876F527DE9064BB /* Pods_MoneyManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoneyManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCD2B01C650ADB4740FA9C30 /* Pods-MoneyManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyManagerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoneyManagerTests/Pods-MoneyManagerTests.release.xcconfig"; sourceTree = "<group>"; };
+		F33458756D01239E7ECBF3CA /* Pods_MoneyManagerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoneyManagerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D75D9436F071E573C13F37C /* Pods_MoneyManagerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				B81B02EDD876F527DE9064BB /* Pods_MoneyManager.framework */,
+				F33458756D01239E7ECBF3CA /* Pods_MoneyManagerTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -102,6 +110,8 @@
 			children = (
 				1AAB1AA75A424496ADBE7A5A /* Pods-MoneyManager.debug.xcconfig */,
 				1FA322146821923C4745440F /* Pods-MoneyManager.release.xcconfig */,
+				432E10EE47D0437901B3E927 /* Pods-MoneyManagerTests.debug.xcconfig */,
+				BCD2B01C650ADB4740FA9C30 /* Pods-MoneyManagerTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -157,6 +167,7 @@
 				ACD93947218EE8410004416A /* Info.plist */,
 				AC3DB4F22190C2D90025F823 /* DataManagerTests.swift */,
 				ACECCB842191F6050055F233 /* NetworkServiceTests.swift */,
+				AC622C9A219CADAD00ADD05E /* TestDataFactory.swift */,
 			);
 			path = MoneyManagerTests;
 			sourceTree = "<group>";
@@ -260,9 +271,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ACD9394C218EE8410004416A /* Build configuration list for PBXNativeTarget "MoneyManagerTests" */;
 			buildPhases = (
+				9136E0C1CD1271084D718354 /* [CP] Check Pods Manifest.lock */,
 				ACD9393F218EE8410004416A /* Sources */,
 				ACD93940218EE8410004416A /* Frameworks */,
 				ACD93941218EE8410004416A /* Resources */,
+				FFB8EC4AEB9BA767E314C92F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -345,8 +358,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MoneyManager/Pods-MoneyManager-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-iOS11.2/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON-iOS11.2/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -358,6 +371,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoneyManager/Pods-MoneyManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9136E0C1CD1271084D718354 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoneyManagerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A81424404480AA8477A663DE /* [CP] Check Pods Manifest.lock */ = {
@@ -380,6 +415,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFB8EC4AEB9BA767E314C92F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MoneyManagerTests/Pods-MoneyManagerTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-iOS12.1/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON-iOS12.1/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoneyManagerTests/Pods-MoneyManagerTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -409,6 +468,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC622C9B219CADAD00ADD05E /* TestDataFactory.swift in Sources */,
 				ACD93946218EE8410004416A /* MainControllerTests.swift in Sources */,
 				AC3DB4F32190C2D90025F823 /* DataManagerTests.swift in Sources */,
 				ACECCB852191F6050055F233 /* NetworkServiceTests.swift in Sources */,
@@ -564,6 +624,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = MoneyManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hulkdx.moneymanager.MoneyManager;
@@ -580,6 +641,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = MoneyManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hulkdx.moneymanager.MoneyManager;
@@ -591,6 +653,7 @@
 		};
 		ACD9394A218EE8410004416A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 432E10EE47D0437901B3E927 /* Pods-MoneyManagerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -610,6 +673,7 @@
 		};
 		ACD9394B218EE8410004416A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCD2B01C650ADB4740FA9C30 /* Pods-MoneyManagerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_OBJC_WEAK = YES;

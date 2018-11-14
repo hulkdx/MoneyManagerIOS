@@ -23,22 +23,38 @@ class MainPresenterTests: XCTestCase {
         XCTAssert(dataManager.is_get_transactions_remote_called)
     }
 
+    func test_sync_transaction_should_call_view_showTransaction() {
+        // 
+        
+        sut.syncTransactions()
+
+        // verify?
+        XCTAssert(view.is_showTransaction_called)
+    }
 }
 
 //
-// The mocks
+// Mocks
 //
 
 extension MainPresenterTests {
     class MockView: MainMvpView {
-        
+        var is_showTransaction_called = false
+        func showTransaction(transactions: [Transaction]) {
+            is_showTransaction_called = true
+        }
     }
     
     class MockDataManager: DataManager {
         var is_get_transactions_remote_called = false
+        var get_failed_data = false
         
-        override func getTransactionsRemote(completion: @escaping (DataResult<String>) -> ()) {
-            super.getTransactionsRemote(completion: completion)
+        override func getTransactionsRemote(completion: @escaping (DataResult<[Transaction]>) -> ()) {
+            if (!get_failed_data) {
+                completion(.success(TestDataFactory.TRANSACTION_LIST_TEST, TestDataFactory.AMOUNT_COUNT_TEST))
+            } else {
+                completion(.failed(""))
+            }
             is_get_transactions_remote_called = true
         }
     }

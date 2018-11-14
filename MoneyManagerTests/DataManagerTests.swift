@@ -28,10 +28,9 @@ class DataManagerTests: XCTestCase {
 }
 
 extension DataManagerTests {
-    class MockNetworkService: NetworkService {
+    class MockNetworkService: NetworkServiceProtocol {
         var isGetTransactionsCalled = false
-        override func getTransactions(completion: @escaping (DataResult<String>) -> ()) {
-            super.getTransactions(completion: completion)
+        func getTransactions(completion: @escaping (DataResult<[Transaction]>) -> ()) {
             isGetTransactionsCalled = true
         }
     }
