@@ -6,14 +6,17 @@
 
 class MainPresenter<T: MainMvpView>: BasePresenter<T>, MainPresenterProtocol {
     
-    var dataManager: DataManager!
+    var dataManager: DataManagerProtocol!
     
-    override init() {
-        dataManager = DataManager()
+    // For test (MainControllerTests.swift)
+    override init() {}
+    
+    init(dataManager: DataManagerProtocol) {
+        self.dataManager = dataManager
     }
     
     func syncTransactions() {
-        dataManager.getTransactionsRemote{ result in
+        dataManager.getTransactions{ result in
             switch result {
             case .success(let transactionArray, let extra):
                 let amountCount = extra as! Int
@@ -28,6 +31,6 @@ class MainPresenter<T: MainMvpView>: BasePresenter<T>, MainPresenterProtocol {
     }
 }
 
-protocol MainPresenterProtocol {
+protocol MainPresenterProtocol: IPresenter {
     func syncTransactions()
 }

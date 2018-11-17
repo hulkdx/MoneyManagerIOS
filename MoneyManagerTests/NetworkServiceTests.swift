@@ -11,7 +11,7 @@ import XCTest
 
 class NetworkServiceTests: XCTestCase {
     
-    let NET_TIMEOUT = 3 as Double
+    let NET_TIMEOUT = 5 as Double
 
     var sut: NetworkService!
     

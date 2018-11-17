@@ -8,7 +8,7 @@ target 'MoneyManager' do
   # Pods for MoneyManager
   pod "SwiftyJSON"
   pod "Alamofire"
-
+  pod 'RealmSwift'
 end
 
 target 'MoneyManagerTests' do

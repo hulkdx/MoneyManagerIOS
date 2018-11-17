@@ -13,15 +13,14 @@ class DataManagerTests: XCTestCase {
     
     var sut: DataManager!
     let networkService = MockNetworkService()
+    let databaseHelper = MockDatabaseHelper()
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        sut                = DataManager()
-        sut.networkService = networkService
+        sut                = DataManager(networkService: networkService, databaseHelper: databaseHelper)
     }
 
     func test_getTransactionsRemote_shouldcall_networkService() {
-        sut.getTransactionsRemote{ ignore in}
+        sut.getTransactions{ ignore in}
         
         XCTAssert(networkService.isGetTransactionsCalled)
     }
@@ -33,5 +32,13 @@ extension DataManagerTests {
         func getTransactions(completion: @escaping (DataResult<[Transaction]>) -> ()) {
             isGetTransactionsCalled = true
         }
+    }
+    
+    class MockDatabaseHelper: DatabaseHelperProtocol {
+        
+        func insert(_ transactionArray: [Transaction]) {
+            
+        }
+        
     }
 }

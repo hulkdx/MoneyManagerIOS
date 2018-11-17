@@ -19,8 +19,12 @@
 		AC64567F21937CCB00295D4F /* DataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC64567E21937CCB00295D4F /* DataResult.swift */; };
 		AC69C0962198958A0019B0F1 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69C0952198958A0019B0F1 /* Transaction.swift */; };
 		AC69C09C2198C3550019B0F1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69C09B2198C3550019B0F1 /* Category.swift */; };
+		AC8805C621A023B800D6CA17 /* DatabaseHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8805C521A023B800D6CA17 /* DatabaseHelperTests.swift */; };
 		ACAB7A5A218F2BFA00062B43 /* MainPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAB7A59218F2BFA00062B43 /* MainPresenterTests.swift */; };
 		ACB2FB8D201DE32E00DD2A43 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB2FB8C201DE32E00DD2A43 /* BorderView.swift */; };
+		ACB62AD1219F264A0057AAE1 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB62AD0219F264A0057AAE1 /* Injection.swift */; };
+		ACB62AD3219F29CE0057AAE1 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB62AD2219F29CE0057AAE1 /* DatabaseHelper.swift */; };
+		ACB62AD6219F2BD90057AAE1 /* InjectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB62AD5219F2BD90057AAE1 /* InjectionTests.swift */; };
 		ACD93946218EE8410004416A /* MainControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD93945218EE8410004416A /* MainControllerTests.swift */; };
 		ACD93953218EF3670004416A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD93952218EF3670004416A /* NetworkService.swift */; };
 		ACD93957218EFA600004416A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD93956218EFA600004416A /* DataManager.swift */; };
@@ -58,8 +62,12 @@
 		AC64567E21937CCB00295D4F /* DataResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResult.swift; sourceTree = "<group>"; };
 		AC69C0952198958A0019B0F1 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		AC69C09B2198C3550019B0F1 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		AC8805C521A023B800D6CA17 /* DatabaseHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelperTests.swift; sourceTree = "<group>"; };
 		ACAB7A59218F2BFA00062B43 /* MainPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTests.swift; sourceTree = "<group>"; };
 		ACB2FB8C201DE32E00DD2A43 /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
+		ACB62AD0219F264A0057AAE1 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
+		ACB62AD2219F29CE0057AAE1 /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
+		ACB62AD5219F2BD90057AAE1 /* InjectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionTests.swift; sourceTree = "<group>"; };
 		ACD93943218EE8410004416A /* MoneyManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACD93945218EE8410004416A /* MainControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainControllerTests.swift; sourceTree = "<group>"; };
 		ACD93947218EE8410004416A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -152,6 +160,7 @@
 				AC274A33201C8AF6008CED02 /* Assets.xcassets */,
 				ACD9394D218EF16E0004416A /* Data */,
 				AC274A38201C8AF6008CED02 /* Info.plist */,
+				ACB62ACE219F25E00057AAE1 /* Injection */,
 				AC274A35201C8AF6008CED02 /* LaunchScreen.storyboard */,
 				AC0824E42184D2A700BC259B /* UI */,
 				ACD9394E218EF17D0004416A /* Utils */,
@@ -159,15 +168,33 @@
 			path = MoneyManager;
 			sourceTree = "<group>";
 		};
+		ACB62ACE219F25E00057AAE1 /* Injection */ = {
+			isa = PBXGroup;
+			children = (
+				ACB62AD0219F264A0057AAE1 /* Injection.swift */,
+			);
+			path = Injection;
+			sourceTree = "<group>";
+		};
+		ACB62AD4219F2BCB0057AAE1 /* Injection */ = {
+			isa = PBXGroup;
+			children = (
+				ACB62AD5219F2BD90057AAE1 /* InjectionTests.swift */,
+			);
+			path = Injection;
+			sourceTree = "<group>";
+		};
 		ACD93944218EE8410004416A /* MoneyManagerTests */ = {
 			isa = PBXGroup;
 			children = (
+				ACB62AD4219F2BCB0057AAE1 /* Injection */,
+				AC3DB4F22190C2D90025F823 /* DataManagerTests.swift */,
+				ACD93947218EE8410004416A /* Info.plist */,
 				ACD93945218EE8410004416A /* MainControllerTests.swift */,
 				ACAB7A59218F2BFA00062B43 /* MainPresenterTests.swift */,
-				ACD93947218EE8410004416A /* Info.plist */,
-				AC3DB4F22190C2D90025F823 /* DataManagerTests.swift */,
 				ACECCB842191F6050055F233 /* NetworkServiceTests.swift */,
 				AC622C9A219CADAD00ADD05E /* TestDataFactory.swift */,
+				AC8805C521A023B800D6CA17 /* DatabaseHelperTests.swift */,
 			);
 			path = MoneyManagerTests;
 			sourceTree = "<group>";
@@ -221,6 +248,7 @@
 		ACD93954218EFA310004416A /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				ACB62AD2219F29CE0057AAE1 /* DatabaseHelper.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -359,6 +387,8 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MoneyManager/Pods-MoneyManager-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire-iOS11.2/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON-iOS11.2/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -366,6 +396,8 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,12 +481,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC274A2F201C8AF6008CED02 /* MainViewController.swift in Sources */,
+				ACB62AD3219F29CE0057AAE1 /* DatabaseHelper.swift in Sources */,
 				ACD93962218EFF110004416A /* BasePresenter.swift in Sources */,
 				AC69C0962198958A0019B0F1 /* Transaction.swift in Sources */,
 				ACD93964218EFF200004416A /* BaseMvpView.swift in Sources */,
 				ACD93957218EFA600004416A /* DataManager.swift in Sources */,
 				ACB2FB8D201DE32E00DD2A43 /* BorderView.swift in Sources */,
 				ACD93953218EF3670004416A /* NetworkService.swift in Sources */,
+				ACB62AD1219F264A0057AAE1 /* Injection.swift in Sources */,
 				ACD93960218EFEFE0004416A /* BaseViewController.swift in Sources */,
 				ACD9395B218EFAA40004416A /* MainPresenter.swift in Sources */,
 				AC69C09C2198C3550019B0F1 /* Category.swift in Sources */,
@@ -471,8 +505,10 @@
 				AC622C9B219CADAD00ADD05E /* TestDataFactory.swift in Sources */,
 				ACD93946218EE8410004416A /* MainControllerTests.swift in Sources */,
 				AC3DB4F32190C2D90025F823 /* DataManagerTests.swift in Sources */,
+				ACB62AD6219F2BD90057AAE1 /* InjectionTests.swift in Sources */,
 				ACECCB852191F6050055F233 /* NetworkServiceTests.swift in Sources */,
 				ACAB7A5A218F2BFA00062B43 /* MainPresenterTests.swift in Sources */,
+				AC8805C621A023B800D6CA17 /* DatabaseHelperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

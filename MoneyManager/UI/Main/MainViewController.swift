@@ -13,7 +13,7 @@ class MainViewController: BaseViewController, MainMvpView {
         print("viewDidLoad")
         super.viewDidLoad()
         
-        self.presenter = MainPresenter()
+        self.presenter = Injection.provideMainPresenter()
         
         onStart()
     }
