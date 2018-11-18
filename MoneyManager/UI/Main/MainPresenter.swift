@@ -16,6 +16,10 @@ class MainPresenter<T: MainMvpView>: BasePresenter<T>, MainPresenterProtocol {
     }
     
     func syncTransactions() {
+        dataManager.syncTransactions()
+    }
+    
+    func getTransactions() {
         dataManager.getTransactions{ result in
             switch result {
             case .success(let transactionArray, let extra):
@@ -33,4 +37,5 @@ class MainPresenter<T: MainMvpView>: BasePresenter<T>, MainPresenterProtocol {
 
 protocol MainPresenterProtocol: IPresenter {
     func syncTransactions()
+    func getTransactions()
 }

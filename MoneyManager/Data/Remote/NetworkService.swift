@@ -4,6 +4,7 @@
 
 import Alamofire
 import SwiftyJSON
+import RxSwift
 
 class NetworkService: NetworkServiceProtocol {
     

@@ -9,6 +9,8 @@ target 'MoneyManager' do
   pod "SwiftyJSON"
   pod "Alamofire"
   pod 'RealmSwift'
+  pod 'RxSwift',    '~> 4.0'
+  pod 'RxCocoa',    '~> 4.0'
 end
 
 target 'MoneyManagerTests' do
@@ -18,4 +20,7 @@ target 'MoneyManagerTests' do
   # Pods for MoneyManager
   pod "SwiftyJSON"
   pod "Alamofire"
+  pod 'RealmSwift'
+  pod 'RxBlocking', '~> 4.0'
+  pod 'RxTest',     '~> 4.0'
 end

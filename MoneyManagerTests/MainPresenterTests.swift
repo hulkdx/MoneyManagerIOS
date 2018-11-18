@@ -20,13 +20,13 @@ class MainPresenterTests: XCTestCase {
     func test_sync_transaction_should_call_data_manager() {
         sut.syncTransactions()
         
-        XCTAssert(dataManager.is_get_transactions_called)
+        XCTAssert(dataManager.is_sync_transactions_called)
     }
 
     func test_sync_transaction_should_call_view_showTransaction() {
         // 
         
-        sut.syncTransactions()
+        sut.getTransactions()
 
         // verify?
         XCTAssert(view.is_showTransaction_called)
@@ -48,6 +48,7 @@ extension MainPresenterTests {
     class MockDataManager: DataManagerProtocol {
         
         var is_get_transactions_called = false
+        var is_sync_transactions_called = false
         var get_failed_data = false
         
         func getTransactions(completion: @escaping (DataResult<[Transaction]>) -> ()) {
@@ -57,6 +58,10 @@ extension MainPresenterTests {
                 completion(.failed(""))
             }
             is_get_transactions_called = true
+        }
+        
+        func syncTransactions() {
+            is_sync_transactions_called = true
         }
     }
 }

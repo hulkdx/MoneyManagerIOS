@@ -1,9 +1,9 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Alamofire-iOS12.1" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON-iOS12.1"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Alamofire-iOS12.1" "${PODS_CONFIGURATION_BUILD_DIR}/Realm-iOS12.1" "${PODS_CONFIGURATION_BUILD_DIR}/RealmSwift-iOS12.1" "${PODS_CONFIGURATION_BUILD_DIR}/RxAtomic-iOS12.1" "${PODS_CONFIGURATION_BUILD_DIR}/RxBlocking" "${PODS_CONFIGURATION_BUILD_DIR}/RxSwift-iOS12.1" "${PODS_CONFIGURATION_BUILD_DIR}/RxTest" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON-iOS12.1"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Alamofire-iOS12.1/Alamofire.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON-iOS12.1/SwiftyJSON.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "Alamofire" -framework "SwiftyJSON"
+OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Alamofire-iOS12.1/Alamofire.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Realm-iOS12.1/Realm.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/RealmSwift-iOS12.1/RealmSwift.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/RxAtomic-iOS12.1/RxAtomic.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/RxBlocking/RxBlocking.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/RxSwift-iOS12.1/RxSwift.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/RxTest/RxTest.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON-iOS12.1/SwiftyJSON.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -ObjC -framework "Alamofire" -framework "Realm" -framework "RealmSwift" -framework "RxAtomic" -framework "RxBlocking" -framework "RxSwift" -framework "RxTest" -framework "SwiftyJSON"
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

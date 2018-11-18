@@ -16,7 +16,7 @@ class DataManagerTests: XCTestCase {
     let databaseHelper = MockDatabaseHelper()
 
     override func setUp() {
-        sut                = DataManager(networkService: networkService, databaseHelper: databaseHelper)
+        sut = DataManager(networkService: networkService, databaseHelper: databaseHelper)
     }
 
     func test_getTransactionsRemote_shouldcall_networkService() {
@@ -35,6 +35,17 @@ extension DataManagerTests {
     }
     
     class MockDatabaseHelper: DatabaseHelperProtocol {
+        
+        var transactionArray: [Transaction]? = nil
+        
+        func getTransactions() -> [Transaction] {
+            return transactionArray ?? [Transaction]()
+        }
+        
+        func insert(_ transaction: Transaction) {
+            
+        }
+        
         
         func insert(_ transactionArray: [Transaction]) {
             

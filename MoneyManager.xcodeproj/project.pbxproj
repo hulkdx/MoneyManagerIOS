@@ -20,6 +20,10 @@
 		AC69C0962198958A0019B0F1 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69C0952198958A0019B0F1 /* Transaction.swift */; };
 		AC69C09C2198C3550019B0F1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69C09B2198C3550019B0F1 /* Category.swift */; };
 		AC8805C621A023B800D6CA17 /* DatabaseHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8805C521A023B800D6CA17 /* DatabaseHelperTests.swift */; };
+		AC8805CC21A0852900D6CA17 /* TransactionRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8805CB21A0852900D6CA17 /* TransactionRealm.swift */; };
+		AC8805CF21A085EB00D6CA17 /* CategoryRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8805CE21A085EB00D6CA17 /* CategoryRealm.swift */; };
+		AC8805D221A0873900D6CA17 /* DatabaseModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8805D121A0873900D6CA17 /* DatabaseModelMapper.swift */; };
+		AC8805D421A0955600D6CA17 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8805D321A0955600D6CA17 /* RealmHelper.swift */; };
 		ACAB7A5A218F2BFA00062B43 /* MainPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAB7A59218F2BFA00062B43 /* MainPresenterTests.swift */; };
 		ACB2FB8D201DE32E00DD2A43 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB2FB8C201DE32E00DD2A43 /* BorderView.swift */; };
 		ACB62AD1219F264A0057AAE1 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB62AD0219F264A0057AAE1 /* Injection.swift */; };
@@ -63,6 +67,10 @@
 		AC69C0952198958A0019B0F1 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		AC69C09B2198C3550019B0F1 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		AC8805C521A023B800D6CA17 /* DatabaseHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelperTests.swift; sourceTree = "<group>"; };
+		AC8805CB21A0852900D6CA17 /* TransactionRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRealm.swift; sourceTree = "<group>"; };
+		AC8805CE21A085EB00D6CA17 /* CategoryRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRealm.swift; sourceTree = "<group>"; };
+		AC8805D121A0873900D6CA17 /* DatabaseModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseModelMapper.swift; sourceTree = "<group>"; };
+		AC8805D321A0955600D6CA17 /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 		ACAB7A59218F2BFA00062B43 /* MainPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTests.swift; sourceTree = "<group>"; };
 		ACB2FB8C201DE32E00DD2A43 /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
 		ACB62AD0219F264A0057AAE1 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
@@ -168,6 +176,23 @@
 			path = MoneyManager;
 			sourceTree = "<group>";
 		};
+		AC8805CA21A0851000D6CA17 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				AC8805CB21A0852900D6CA17 /* TransactionRealm.swift */,
+				AC8805CE21A085EB00D6CA17 /* CategoryRealm.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		AC8805D021A0872500D6CA17 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				AC8805D121A0873900D6CA17 /* DatabaseModelMapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
 		ACB62ACE219F25E00057AAE1 /* Injection */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,13 +213,13 @@
 			isa = PBXGroup;
 			children = (
 				ACB62AD4219F2BCB0057AAE1 /* Injection */,
+				AC8805C521A023B800D6CA17 /* DatabaseHelperTests.swift */,
 				AC3DB4F22190C2D90025F823 /* DataManagerTests.swift */,
 				ACD93947218EE8410004416A /* Info.plist */,
 				ACD93945218EE8410004416A /* MainControllerTests.swift */,
 				ACAB7A59218F2BFA00062B43 /* MainPresenterTests.swift */,
 				ACECCB842191F6050055F233 /* NetworkServiceTests.swift */,
 				AC622C9A219CADAD00ADD05E /* TestDataFactory.swift */,
-				AC8805C521A023B800D6CA17 /* DatabaseHelperTests.swift */,
 			);
 			path = MoneyManagerTests;
 			sourceTree = "<group>";
@@ -202,6 +227,7 @@
 		ACD9394D218EF16E0004416A /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				AC8805D021A0872500D6CA17 /* Mapper */,
 				ACD93955218EFA430004416A /* Model */,
 				ACD93954218EFA310004416A /* Local */,
 				ACD93951218EF3310004416A /* Remote */,
@@ -249,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				ACB62AD2219F29CE0057AAE1 /* DatabaseHelper.swift */,
+				AC8805D321A0955600D6CA17 /* RealmHelper.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -256,6 +283,7 @@
 		ACD93955218EFA430004416A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AC8805CA21A0851000D6CA17 /* Database */,
 				AC64567E21937CCB00295D4F /* DataResult.swift */,
 				AC69C0952198958A0019B0F1 /* Transaction.swift */,
 				AC69C09B2198C3550019B0F1 /* Category.swift */,
@@ -387,8 +415,11 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MoneyManager/Pods-MoneyManager-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire-iOS11.2/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm-iOS11.2/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift-iOS11.2/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic-iOS11.2/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS11.2/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON-iOS11.2/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -398,6 +429,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,14 +493,26 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MoneyManagerTests/Pods-MoneyManagerTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire-iOS12.1/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm-iOS12.1/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift-iOS12.1/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic-iOS12.1/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS12.1/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON-iOS12.1/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -485,11 +531,15 @@
 				ACD93962218EFF110004416A /* BasePresenter.swift in Sources */,
 				AC69C0962198958A0019B0F1 /* Transaction.swift in Sources */,
 				ACD93964218EFF200004416A /* BaseMvpView.swift in Sources */,
+				AC8805CF21A085EB00D6CA17 /* CategoryRealm.swift in Sources */,
 				ACD93957218EFA600004416A /* DataManager.swift in Sources */,
+				AC8805D221A0873900D6CA17 /* DatabaseModelMapper.swift in Sources */,
 				ACB2FB8D201DE32E00DD2A43 /* BorderView.swift in Sources */,
 				ACD93953218EF3670004416A /* NetworkService.swift in Sources */,
+				AC8805CC21A0852900D6CA17 /* TransactionRealm.swift in Sources */,
 				ACB62AD1219F264A0057AAE1 /* Injection.swift in Sources */,
 				ACD93960218EFEFE0004416A /* BaseViewController.swift in Sources */,
+				AC8805D421A0955600D6CA17 /* RealmHelper.swift in Sources */,
 				ACD9395B218EFAA40004416A /* MainPresenter.swift in Sources */,
 				AC69C09C2198C3550019B0F1 /* Category.swift in Sources */,
 				AC274A2D201C8AF6008CED02 /* AppDelegate.swift in Sources */,

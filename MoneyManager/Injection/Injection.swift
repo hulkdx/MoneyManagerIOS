@@ -22,6 +22,11 @@ class Injection {
     }
     
     static func provideDatabaseHelperProtocol() -> DatabaseHelperProtocol {
-        return DatabaseHelper()
+        let realmHelper = provideRealmHelper()
+        return DatabaseHelper(realmHelper: realmHelper)
+    }
+    
+    static func provideRealmHelper() -> RealmHelper {
+        return RealmHelper()
     }
 }

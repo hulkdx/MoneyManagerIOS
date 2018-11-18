@@ -144,11 +144,23 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire-iOS12.1/Alamofire.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Realm-iOS12.1/Realm.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RealmSwift-iOS12.1/RealmSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxAtomic-iOS12.1/RxAtomic.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxSwift-iOS12.1/RxSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyJSON-iOS12.1/SwiftyJSON.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire-iOS12.1/Alamofire.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Realm-iOS12.1/Realm.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RealmSwift-iOS12.1/RealmSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxAtomic-iOS12.1/RxAtomic.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxSwift-iOS12.1/RxSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyJSON-iOS12.1/SwiftyJSON.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

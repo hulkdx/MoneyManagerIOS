@@ -144,14 +144,20 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire-iOS11.2/Alamofire.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/Realm/Realm.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Realm-iOS11.2/Realm.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RealmSwift-iOS11.2/RealmSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxAtomic-iOS11.2/RxAtomic.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxSwift-iOS11.2/RxSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyJSON-iOS11.2/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire-iOS11.2/Alamofire.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/Realm/Realm.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Realm-iOS11.2/Realm.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RealmSwift-iOS11.2/RealmSwift.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxAtomic-iOS11.2/RxAtomic.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxSwift-iOS11.2/RxSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyJSON-iOS11.2/SwiftyJSON.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
