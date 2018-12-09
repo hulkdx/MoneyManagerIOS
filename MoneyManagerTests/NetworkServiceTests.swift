@@ -23,18 +23,9 @@ class NetworkServiceTests: XCTestCase {
         // TODO add a test data and result the expected
         let e = expectation(description: "Network")
         
-        sut.getTransactions{ result in
-            var isFailed = false
-            switch result {
-            case .success(_):
-                break
-            case .failed(_):
-                isFailed = true
-                break
-            }
-            XCTAssert(!isFailed)
+        _ = sut.getTransactions().subscribe(onNext: { x in
             e.fulfill()
-        }
+        })
         
         waitForExpectations(timeout: NET_TIMEOUT, handler: nil)
     }

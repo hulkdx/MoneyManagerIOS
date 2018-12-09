@@ -12,7 +12,7 @@ class NetworkService: NetworkServiceProtocol {
     // Urls
     // 
     static let BASE_URL             = "https://moneymanagerv2.herokuapp.com/api/"
-    static let GET_TRANSACTIONS_URL: String = BASE_URL + "transactions/get"
+    static let GET_TRANSACTIONS_URL = BASE_URL + "transactions/get"
     
     
     // Common headers function
@@ -24,11 +24,10 @@ class NetworkService: NetworkServiceProtocol {
         return headers
     }
     
-    func getTransactions(completion: @escaping (DataResult<[Transaction]>) -> () ) {
+    func getTransactions() -> Observable<[Transaction]> {
         
-        commonRequest(url:        NetworkService.GET_TRANSACTIONS_URL,
-                      method:     HTTPMethod.get,
-                      completion: completion)
+        return commonRequest(url:        NetworkService.GET_TRANSACTIONS_URL,
+                             method:     HTTPMethod.get)
         { json -> ([Transaction], Int) in
             var result = [Transaction]()
             // print(json)
@@ -66,43 +65,55 @@ class NetworkService: NetworkServiceProtocol {
     func commonRequest<T> (url: String,
                            method: HTTPMethod,
                            paramethers: Parameters? = nil,
-                           completion: @escaping (DataResult<[T]>) -> (),
-                           onJsonReceived: @escaping (NSDictionary) -> ([T], Any?))
+                           onJsonReceived: @escaping (NSDictionary) -> (T, Any?)) -> Observable<T>
     {
-        Alamofire.request(url,
-                          method: method,
-                          parameters: paramethers,
-                          headers:    getHeaders())
-            .responseJSON{ response in
-                
-                var errorStr = ""
-                
-                if response.result.isSuccess {
-                    print("getTransactions, Success!")
-                    if let result = response.result.value {
-                        let json = result as! NSDictionary
-    
-                        let (result, extra) = onJsonReceived(json)
-                        //print(result)
-                        completion(.success(result, extra))
-                        return
-                    }
-                    else
-                    {
-                        errorStr = "Cannot convert json."
+        return Observable.create({ (observer) -> Disposable in
+            let request = Alamofire.request(url,
+                                           method: method,
+                                           parameters: paramethers,
+                                           headers:    self.getHeaders())
+                .responseJSON{ response in
+                    
+                    var errorStr = ""
+                    
+                    if response.result.isSuccess {
+                        print("getTransactions, Success!")
+                        if let result = response.result.value {
+                            let json = result as! NSDictionary
+                            
+                            let (res, extra) = onJsonReceived(json)
+                            //print(result)
+                            observer.onNext(res)
+                            //completion(.success(result, extra))
+                            return
+                        }
+                        else
+                        {
+                            errorStr = "Cannot convert json."
+                        }
+                        
+                    } else {
+                        errorStr = String(describing: response.result.error)
                     }
                     
-                } else {
-                    errorStr = String(describing: response.result.error)
-                }
-                
-                print("getTransactions \(errorStr)")
-                completion(.failed(errorStr))
+                    print("getTransactions \(errorStr)")
+                    
+                    
+                    observer.onError(NetworkError(reason: errorStr))
             }
+            
+            return Disposables.create {
+                request.cancel()
+            }
+        })
     }
 }
 
 
 protocol NetworkServiceProtocol {
-    func getTransactions(completion: @escaping (DataResult<[Transaction]>) -> () )
+    func getTransactions() -> Observable<[Transaction]>
+}
+
+struct NetworkError: Error {
+    let reason: String
 }

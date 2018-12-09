@@ -3,6 +3,7 @@
 //
 
 import RealmSwift
+import RxSwift
 
 class DatabaseHelper: DatabaseHelperProtocol {
     
@@ -13,34 +14,111 @@ class DatabaseHelper: DatabaseHelperProtocol {
     }
     
     //-----------------------
+    // Commons
+    //-----------------------
+    
+    // TODO
+    
+    //-----------------------
     // Transactions
     //-----------------------
     
-    func getTransactions() -> [Transaction] {
-        let realm = try! realmHelper.getRealm()
-        let result = realm.objects(TransactionRealm.self)
-        return DatabaseModelMapper.convert(result)
+    func getTransactions() -> Observable<[Transaction]> {
+        print("getTransactions")
+        return Observable.create { (observer) -> Disposable in
+            
+            var token: NotificationToken? = nil
+            
+            do {
+                let realm  = try self.realmHelper.getRealm()
+                let result = realm.objects(TransactionRealm.self)
+                
+                token = result.observe({ (changes) in
+                    switch changes {
+                    case .initial(_):
+                        break
+                    case .update(let changedResult, _, _, _):
+                        let data = DatabaseModelMapper.convert(changedResult)
+                        observer.onNext(data)
+                        break
+                    case .error(let error):
+                        observer.onError(error)
+                    }
+                })
+                
+                let data   = DatabaseModelMapper.convert(result)
+                observer.onNext(data)
+
+            } catch let error {
+                observer.onError(error)
+            }
+            
+            return Disposables.create {
+                print("SABA DISPOSE")
+                token?.invalidate()
+            }
+            
+        }
     }
     
-    func insert(_ transaction: Transaction) {
-        let realm = try! realmHelper.getRealm()
+    func addTransaction(_ transaction: Transaction) -> Observable<Transaction> {
+        //print("addTransaction")
         
-        try! realm.write {
-            print("insert transaction: \(transaction)")
-            let transactionRealm = DatabaseModelMapper.convert(transaction)
-            realm.add(transactionRealm, update: true)
+        return Observable.create { (observer) -> Disposable in
+            
+            var pRealm: Realm? = nil
+            do {
+                let realm  = try self.realmHelper.getRealm()
+                pRealm = realm
+                realm.beginWrite()
+                print("insert transaction: \(transaction)")
+                let transactionRealm = DatabaseModelMapper.convert(transaction)
+                realm.add(transactionRealm, update: true)
+                try realm.commitWrite()
+
+                observer.onNext(transaction)
+                
+            } catch let error {
+                observer.onError(error)
+            }
+            
+            return Disposables.create {
+                if let realm = pRealm {
+                    realm.cancelWrite()
+                }
+            }
         }
     }
     
     
-    func insert(_ transactionArray: [Transaction]) {
-        let realm = try! realmHelper.getRealm()
+    func addTransactions(_ transactionArray: [Transaction]) -> Observable<[Transaction]> {
+        //print("addTransactions")
         
-        try! realm.write {
-            for transaction in transactionArray {
-                print("insert transaction: \(transaction)")
-                let transactionRealm = DatabaseModelMapper.convert(transaction)
-                realm.add(transactionRealm, update: true)
+        return Observable.create { (observer) -> Disposable in
+            
+            var pRealm: Realm? = nil
+            do {
+                let realm  = try self.realmHelper.getRealm()
+                pRealm = realm
+                realm.beginWrite()
+                
+                for transaction in transactionArray {
+                    print("insert transaction: \(transaction)")
+                    let transactionRealm = DatabaseModelMapper.convert(transaction)
+                    realm.add(transactionRealm, update: true)
+                }
+                
+                try realm.commitWrite()
+                observer.onNext(transactionArray)
+                
+            } catch let error {
+                observer.onError(error)
+            }
+            
+            return Disposables.create {
+                if let realm = pRealm {
+                    realm.cancelWrite()
+                }
             }
         }
     }
@@ -51,8 +129,8 @@ class DatabaseHelper: DatabaseHelperProtocol {
 }
 
 protocol DatabaseHelperProtocol {
-    func insert(_ transaction: Transaction)
-    func insert(_ transactionArray: [Transaction])
-    func getTransactions() -> [Transaction]
+    func addTransaction(_ transaction: Transaction)         -> Observable<Transaction>
+    func addTransactions(_ transactionArray: [Transaction]) -> Observable<[Transaction]>
+    func getTransactions()                                  -> Observable<[Transaction]>
 }
 

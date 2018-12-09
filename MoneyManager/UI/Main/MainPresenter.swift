@@ -4,9 +4,12 @@
 // Note: Couldn't figure out a way of doing Generic Type without using 
 //       <T: BaseMvpView>, is there anyway of doing that? 
 
+import RxSwift
+
 class MainPresenter<T: MainMvpView>: BasePresenter<T>, MainPresenterProtocol {
     
     var dataManager: DataManagerProtocol!
+    var disposables: CompositeDisposable = CompositeDisposable()
     
     // For test (MainControllerTests.swift)
     override init() {}
@@ -15,23 +18,33 @@ class MainPresenter<T: MainMvpView>: BasePresenter<T>, MainPresenterProtocol {
         self.dataManager = dataManager
     }
     
+    override func detachView() {
+        super.detachView()
+        disposables.dispose()
+    }
+    
     func syncTransactions() {
-        dataManager.syncTransactions()
+        // print("syncTransactions")
+        let disposable = dataManager.syncTransactions()
+            .subscribe(onNext: { transaction in
+                
+            }, onError: { errors in
+                
+            }, onCompleted: {
+                
+            })
+        let _ = disposables.insert(disposable)
+    
     }
     
     func getTransactions() {
-        dataManager.getTransactions{ result in
-            switch result {
-            case .success(let transactionArray, let extra):
-                let amountCount = extra as! Int
-                print("success, transactionArray: \(transactionArray), amountCount: \(amountCount)")
-                self.getView()?.showTransaction(transactions: transactionArray)
-                break
-            case .failed(_):
-                print("failed")
-                break
-            }
-        }
+        print("getTransactions")
+        let disposable = dataManager.getTransactions()
+            .subscribe(onNext: { transactions in
+                        //print(transaction)
+                self.getView()?.showTransaction(transactions: transactions)
+            })
+        let _ = disposables.insert(disposable)
     }
 }
 

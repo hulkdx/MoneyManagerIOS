@@ -3,6 +3,7 @@
 //
 
 import XCTest
+import RxSwift
 @testable import MoneyManager
 
 class MainPresenterTests: XCTestCase {
@@ -51,17 +52,15 @@ extension MainPresenterTests {
         var is_sync_transactions_called = false
         var get_failed_data = false
         
-        func getTransactions(completion: @escaping (DataResult<[Transaction]>) -> ()) {
-            if (!get_failed_data) {
-                completion(.success(TestDataFactory.TRANSACTION_LIST_TEST, TestDataFactory.AMOUNT_COUNT_TEST))
-            } else {
-                completion(.failed(""))
-            }
-            is_get_transactions_called = true
+        func syncTransactions() -> Observable<[Transaction]> {
+            is_sync_transactions_called = true
+            return Observable.just(TestDataFactory.TRANSACTION_LIST_TEST)
         }
         
-        func syncTransactions() {
+        func getTransactions() -> Observable<[Transaction]> {
             is_sync_transactions_called = true
+            return Observable.just(TestDataFactory.TRANSACTION_LIST_TEST)
         }
+        
     }
 }
