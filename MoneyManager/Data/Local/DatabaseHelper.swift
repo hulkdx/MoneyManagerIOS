@@ -24,7 +24,7 @@ class DatabaseHelper: DatabaseHelperProtocol {
     //-----------------------
     
     func getTransactions() -> Observable<[Transaction]> {
-        print("getTransactions")
+        // Logger.log("getTransactions")
         return Observable.create { (observer) -> Disposable in
             
             var token: NotificationToken? = nil
@@ -54,7 +54,6 @@ class DatabaseHelper: DatabaseHelperProtocol {
             }
             
             return Disposables.create {
-                print("SABA DISPOSE")
                 token?.invalidate()
             }
             
@@ -62,7 +61,7 @@ class DatabaseHelper: DatabaseHelperProtocol {
     }
     
     func addTransaction(_ transaction: Transaction) -> Observable<Transaction> {
-        //print("addTransaction")
+        //Logger.log("addTransaction")
         
         return Observable.create { (observer) -> Disposable in
             
@@ -71,7 +70,7 @@ class DatabaseHelper: DatabaseHelperProtocol {
                 let realm  = try self.realmHelper.getRealm()
                 pRealm = realm
                 realm.beginWrite()
-                print("insert transaction: \(transaction)")
+                Logger.log("insert transaction: \(transaction)")
                 let transactionRealm = DatabaseModelMapper.convert(transaction)
                 realm.add(transactionRealm, update: true)
                 try realm.commitWrite()
@@ -79,6 +78,7 @@ class DatabaseHelper: DatabaseHelperProtocol {
                 observer.onNext(transaction)
                 
             } catch let error {
+                Logger.log("error: \(error)")
                 observer.onError(error)
             }
             
@@ -92,7 +92,7 @@ class DatabaseHelper: DatabaseHelperProtocol {
     
     
     func addTransactions(_ transactionArray: [Transaction]) -> Observable<[Transaction]> {
-        //print("addTransactions")
+        //Logger.log("addTransactions")
         
         return Observable.create { (observer) -> Disposable in
             
@@ -103,7 +103,7 @@ class DatabaseHelper: DatabaseHelperProtocol {
                 realm.beginWrite()
                 
                 for transaction in transactionArray {
-                    print("insert transaction: \(transaction)")
+                    Logger.log("insert transaction: \(transaction)")
                     let transactionRealm = DatabaseModelMapper.convert(transaction)
                     realm.add(transactionRealm, update: true)
                 }

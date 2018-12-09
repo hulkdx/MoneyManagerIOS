@@ -24,7 +24,7 @@ class MainPresenter<T: MainMvpView>: BasePresenter<T>, MainPresenterProtocol {
     }
     
     func syncTransactions() {
-        // print("syncTransactions")
+        // Logger.log("syncTransactions")
         let disposable = dataManager.syncTransactions()
             .subscribe(onNext: { transaction in
                 
@@ -38,10 +38,10 @@ class MainPresenter<T: MainMvpView>: BasePresenter<T>, MainPresenterProtocol {
     }
     
     func getTransactions() {
-        print("getTransactions")
+        // Logger.log("getTransactions")
         let disposable = dataManager.getTransactions()
             .subscribe(onNext: { transactions in
-                        //print(transaction)
+                        //Logger.log(transaction)
                 self.getView()?.showTransaction(transactions: transactions)
             })
         let _ = disposables.insert(disposable)

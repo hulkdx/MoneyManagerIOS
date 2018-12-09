@@ -10,7 +10,7 @@ class MainViewController: BaseViewController, MainMvpView {
     var presenter: MainPresenter<MainViewController>!
 
     override func viewDidLoad() {
-        print("viewDidLoad")
+        // Logger.log("viewDidLoad")
         super.viewDidLoad()
         
         self.presenter = Injection.provideMainPresenter()

@@ -9,12 +9,12 @@ class BasePresenter<T: BaseMvpView>: IPresenter {
     private var view: T?
     
     func attachView(view: T) {
-        print("attachView")
+        // Logger.log("attachView")
         self.view = view
     }
     
     func detachView() {
-        print("detachView")
+        // Logger.log("detachView")
         view = nil
     }
     

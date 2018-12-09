@@ -30,7 +30,7 @@ class NetworkService: NetworkServiceProtocol {
                              method:     HTTPMethod.get)
         { json -> ([Transaction], Int) in
             var result = [Transaction]()
-            // print(json)
+            // Logger.log(json)
             // Converting to object
             let amount_count = json["amount_count"] as! Int
             let response     = json["response"]     as! Array<NSDictionary>
@@ -77,12 +77,12 @@ class NetworkService: NetworkServiceProtocol {
                     var errorStr = ""
                     
                     if response.result.isSuccess {
-                        print("getTransactions, Success!")
+                        // Logger.log("getTransactions, Success!")
                         if let result = response.result.value {
                             let json = result as! NSDictionary
                             
                             let (res, extra) = onJsonReceived(json)
-                            //print(result)
+                            //Logger.log(result)
                             observer.onNext(res)
                             //completion(.success(result, extra))
                             return
@@ -96,7 +96,7 @@ class NetworkService: NetworkServiceProtocol {
                         errorStr = String(describing: response.result.error)
                     }
                     
-                    print("getTransactions \(errorStr)")
+                    Logger.log("getTransactions \(errorStr)")
                     
                     
                     observer.onError(NetworkError(reason: errorStr))

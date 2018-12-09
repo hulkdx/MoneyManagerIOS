@@ -19,6 +19,7 @@
 		AC64567F21937CCB00295D4F /* DataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC64567E21937CCB00295D4F /* DataResult.swift */; };
 		AC69C0962198958A0019B0F1 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69C0952198958A0019B0F1 /* Transaction.swift */; };
 		AC69C09C2198C3550019B0F1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69C09B2198C3550019B0F1 /* Category.swift */; };
+		AC86A10821BD528900B5B044 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC86A10721BD528800B5B044 /* Logger.swift */; };
 		AC8805CC21A0852900D6CA17 /* TransactionRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8805CB21A0852900D6CA17 /* TransactionRealm.swift */; };
 		AC8805CF21A085EB00D6CA17 /* CategoryRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8805CE21A085EB00D6CA17 /* CategoryRealm.swift */; };
 		AC8805D221A0873900D6CA17 /* DatabaseModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8805D121A0873900D6CA17 /* DatabaseModelMapper.swift */; };
@@ -65,6 +66,7 @@
 		AC64567E21937CCB00295D4F /* DataResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResult.swift; sourceTree = "<group>"; };
 		AC69C0952198958A0019B0F1 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		AC69C09B2198C3550019B0F1 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		AC86A10721BD528800B5B044 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		AC8805CB21A0852900D6CA17 /* TransactionRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRealm.swift; sourceTree = "<group>"; };
 		AC8805CE21A085EB00D6CA17 /* CategoryRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRealm.swift; sourceTree = "<group>"; };
 		AC8805D121A0873900D6CA17 /* DatabaseModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseModelMapper.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				ACD93950218EF1BD0004416A /* CustomViews */,
+				AC86A10721BD528800B5B044 /* Logger.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -538,6 +541,7 @@
 				ACD93960218EFEFE0004416A /* BaseViewController.swift in Sources */,
 				AC8805D421A0955600D6CA17 /* RealmHelper.swift in Sources */,
 				ACD9395B218EFAA40004416A /* MainPresenter.swift in Sources */,
+				AC86A10821BD528900B5B044 /* Logger.swift in Sources */,
 				AC69C09C2198C3550019B0F1 /* Category.swift in Sources */,
 				AC274A2D201C8AF6008CED02 /* AppDelegate.swift in Sources */,
 				ACD9395D218EFAB90004416A /* MainMvpView.swift in Sources */,
