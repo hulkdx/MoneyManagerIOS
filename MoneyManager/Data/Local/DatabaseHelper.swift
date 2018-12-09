@@ -70,7 +70,7 @@ class DatabaseHelper: DatabaseHelperProtocol {
                 let realm  = try self.realmHelper.getRealm()
                 pRealm = realm
                 realm.beginWrite()
-                Logger.log("insert transaction: \(transaction)")
+                //Logger.log("insert transaction: \(transaction)")
                 let transactionRealm = DatabaseModelMapper.convert(transaction)
                 realm.add(transactionRealm, update: true)
                 try realm.commitWrite()
@@ -103,7 +103,7 @@ class DatabaseHelper: DatabaseHelperProtocol {
                 realm.beginWrite()
                 
                 for transaction in transactionArray {
-                    Logger.log("insert transaction: \(transaction)")
+                    // Logger.log("insert transaction: \(transaction)")
                     let transactionRealm = DatabaseModelMapper.convert(transaction)
                     realm.add(transactionRealm, update: true)
                 }

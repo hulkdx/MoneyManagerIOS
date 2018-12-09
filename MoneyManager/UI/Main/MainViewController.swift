@@ -29,6 +29,7 @@ class MainViewController: BaseViewController, MainMvpView {
     func onStart() {
         presenter.attachView(view: self)
         presenter.syncTransactions()
+        presenter.getTransactions()
     }
     
     func onStop() {

@@ -27,14 +27,9 @@ class MainPresenter<T: MainMvpView>: BasePresenter<T>, MainPresenterProtocol {
         // Logger.log("syncTransactions")
         let disposable = dataManager.syncTransactions()
             .subscribe(onNext: { transaction in
-                
-            }, onError: { errors in
-                
-            }, onCompleted: {
-                
-            })
+                // Do nothing
+            }, onError: commonErrors)
         let _ = disposables.insert(disposable)
-    
     }
     
     func getTransactions() {
@@ -43,8 +38,12 @@ class MainPresenter<T: MainMvpView>: BasePresenter<T>, MainPresenterProtocol {
             .subscribe(onNext: { transactions in
                         //Logger.log(transaction)
                 self.getView()?.showTransaction(transactions: transactions)
-            })
+            }, onError: commonErrors)
         let _ = disposables.insert(disposable)
+    }
+    
+    func commonErrors(error: Error) {
+        Logger.log("error: \(error)", functionName: Logger.getPreviousFunctionName())
     }
 }
 
